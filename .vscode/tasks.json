@@ -4,13 +4,13 @@
         {
             "label": "switch Windows engine",
             "type": "shell",
-            "command": "& $Env:ProgramFiles\\Docker\\Docker\\DockerCli.exe -SwitchWindowsEngine .",
+            "command": "& $Env:ProgramFiles\\Docker\\Docker\\DockerCli.exe -SwitchWindowsEngine",
             "problemMatcher": []
         },
         {
             "label": "switch Linux engine",
             "type": "shell",
-            "command": "& $Env:ProgramFiles\\Docker\\Docker\\DockerCli.exe -SwitchLinuxEngine .",
+            "command": "& $Env:ProgramFiles\\Docker\\Docker\\DockerCli.exe -SwitchLinuxEngine",
             "problemMatcher": []
         },
         {
