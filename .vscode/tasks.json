@@ -1,0 +1,83 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "switch Windows engine",
+            "type": "shell",
+            "command": "& $Env:ProgramFiles\\Docker\\Docker\\DockerCli.exe -SwitchWindowsEngine .",
+            "problemMatcher": []
+        },
+        {
+            "label": "switch Linux engine",
+            "type": "shell",
+            "command": "& $Env:ProgramFiles\\Docker\\Docker\\DockerCli.exe -SwitchLinuxEngine .",
+            "problemMatcher": []
+        },
+        {
+            "label": "pull openjdk:8-jdk-slim",
+            "type": "shell",
+            "command": "docker pull openjdk:8-jdk-slim",
+            "problemMatcher": []
+        },
+        {
+            "label": "pull ubuntu:20.04",
+            "type": "shell",
+            "command": "docker pull ubuntu:20.04",
+            "problemMatcher": []
+        },
+        {
+            "label": "pull ubuntu:20.10",
+            "type": "shell",
+            "command": "docker pull ubuntu:20.10",
+            "problemMatcher": []
+        },
+        {
+            "label": "build ci-andk",
+            "type": "shell",
+            "command": "docker build -t mizarjp/ci-andk ci-andk",
+            "problemMatcher": []
+        },
+        {
+            "label": "build ci-yo-ubuntu:20.04",
+            "type": "shell",
+            "command": "docker build -t mizarjp/ci-yo-ubuntu:20.04 ci-yo-ubuntu20.04",
+            "problemMatcher": []
+        },
+        {
+            "label": "build ci-yo-ubuntu:20.10",
+            "type": "shell",
+            "command": "docker build -t mizarjp/ci-yo-ubuntu:20.10 ci-yo-ubuntu20.10",
+            "problemMatcher": []
+        },
+        {
+            "label": "build ci-ndk no-cache",
+            "type": "shell",
+            "command": "docker build -t mizarjp/ci-ndk ci-ndk --no-cache",
+            "problemMatcher": []
+        },
+        {
+            "label": "build ci-yo-ubuntu:20.04 no-cache",
+            "type": "shell",
+            "command": "docker build -t mizarjp/ci-yo-ubuntu:20.04 ci-yo-ubuntu20.04 --no-cache",
+            "problemMatcher": []
+        },
+        {
+            "label": "build ci-yo-ubuntu:20.10 no-cache",
+            "type": "shell",
+            "command": "docker build -t mizarjp/ci-yo-ubuntu:20.10 ci-yo-ubuntu20.10 --no-cache",
+            "problemMatcher": []
+        },
+        {
+            "label": "check ci-yo-ubuntu:20.04 apt",
+            "type": "shell",
+            "command": "docker run --rm -it mizarjp/ci-yo-ubuntu:20.04 apt-get update",
+            "problemMatcher": []
+        },
+        {
+            "label": "check ci-yo-ubuntu:20.10 apt",
+            "type": "shell",
+            "command": "docker run --rm -it mizarjp/ci-yo-ubuntu:20.10 apt-get update",
+            "problemMatcher": []
+        }
+    ]
+}
