@@ -2,13 +2,13 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "switch Windows engine",
+            "label": "switch Windows docker engine",
             "type": "shell",
             "command": "& $Env:ProgramFiles\\Docker\\Docker\\DockerCli.exe -SwitchWindowsEngine",
             "problemMatcher": []
         },
         {
-            "label": "switch Linux engine",
+            "label": "switch Linux docker engine",
             "type": "shell",
             "command": "& $Env:ProgramFiles\\Docker\\Docker\\DockerCli.exe -SwitchLinuxEngine",
             "problemMatcher": []
